@@ -377,110 +377,239 @@ h2 {
   7. OTHER SECTIONS (Testimony, Contact)
   ============================================================
 */
-/* Carousel Container */
-.carousel {
+/* Testimonial Carousel Styles */
+#testimonials {
+  background-color: #041C32; /* dark blue background */
+  padding: 50px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #fff; /* default text color */
+}
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+.testimonial-carousel {
   position: relative;
-  max-width: 700px;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.carousel-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.testimonial-carousel input[name="testimonial"] {
+  position: absolute;
+  opacity: 0;
+}
+/* Testimonial card style */
+.testimonial-card {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: #fff; /* text inside card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  overflow: hidden; /* Ensure content is clipped if it overflows */
+}
+.testimonial-img {
+  display: block; /* Ensure it behaves as a block element */
+  flex-shrink: 0; /* Prevent image from shrinking below its defined size */
+  width: 100px;
+  height: 100px;
+  max-width: 100%; /* Ensure image scales down if container is smaller */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #007bff;
+}
+.testimonial-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  color: #fff;
+}
+.testimonial-author {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+}
+/* Dot navigation style */
+.carousel-dots {
+  margin-top: 20px;
+}
+.carousel-dots label {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.carousel-dots label:hover,
+.carousel-dots label:focus {
+  background: #fff;
+  outline: none;
+}
+/* Slide navigation via radio buttons */
+#testimonial1:checked ~ .carousel-slides {
+  transform: translateX(0%);
+}
+#testimonial2:checked ~ .carousel-slides {
+  transform: translateX(-100%);
+}
+#testimonial3:checked ~ .carousel-slides {
+  transform: translateX(-200%);
+}
+/* Active dot highlight */
+#testimonial1:checked ~ .carousel-dots label[for="testimonial1"],
+#testimonial2:checked ~ .carousel-dots label[for="testimonial2"],
+#testimonial3:checked ~ .carousel-dots label[for="testimonial3"] {
+  background: #007bff;
+}
+/* Responsive adjustments */
+ @media (min-width: 600px) {
+  .testimonial-img {
+    width: 120px;
+    height: 120px;
+  }
+}
+ @media (min-width: 1024px) {
+  .testimonial-img {
+    width: 150px;
+    height: 150px;
+  }
+  .testimonial-card {
+    min-height: 350px;
+  }
+}
+
+/* Project Section Styles */
+.projects-section {
+  padding: 50px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: #041C32; /* Dark blue background */
+  color: #fff;
+}
+
+.projects-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on small screens */
+  gap: 30px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
-/* Hide radio inputs */
-.carousel input[type="radio"] {
-  display: none;
-}
-
-/* Carousel Inner Track */
-.carousel-inner {
-  display: flex;
-  transition: transform 0.6s ease-in-out;
-  width: 300%;
-}
-
-/* Each Slide */
-.carousel-item {
-  width: 100%;
+.project {
+  background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
   padding: 30px;
-  text-align: center;
-  flex-shrink: 0;
-  opacity: 0.6;
-  transform: scale(0.95);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  text-align: left;
+  color: #fff;
+  transition: transform 0.3s ease;
 }
 
-.carousel-item img {
-  width: 120px;
-  border-radius: 50%;
-  border: 3px solid var(--link-primary);
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.project h3 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.project h3 a:hover {
+  text-decoration: underline;
+}
+
+.project-icon {
+  margin-right: 10px;
+  color: #00bcd4; /* A contrasting color for icons */
+}
+
+.project p {
+  font-size: 1rem;
+  line-height: 1.6;
   margin-bottom: 15px;
 }
 
-.carousel-item .name {
-  font-weight: bold;
-  font-size: 18px;
+.project ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.project ul li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.project ul li::before {
+  content: '•'; /* Custom bullet point */
+  color: #00bcd4;
+  position: absolute;
+  left: 0;
+}
+
+.project a {
+  display: inline-block;
+  background-color: #00bcd4;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
   margin-top: 10px;
+  transition: background-color 0.3s ease;
 }
 
-.carousel-item .role {
-  font-style: italic;
-  font-size: 14px;
-  color: var(--link-hover);
+.project a:hover {
+  background-color: #0097a7;
 }
 
-.carousel-item .quote {
-  font-size: 16px;
-  margin-top: 15px;
-  color: var(--text-primary);
+/* Responsive adjustments for projects */
+@media (min-width: 768px) {
+  .project-list {
+    grid-template-columns: 1fr 1fr; /* Two columns on medium screens */
+  }
 }
 
-/* Carousel Controls (Dots) */
-.carousel-controls {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+@media (min-width: 1024px) {
+  .project-list {
+    grid-template-columns: 1fr 1fr; /* Two columns on large screens */
+  }
 }
 
-.carousel-controls label {
-  width: 12px;
-  height: 12px;
-  background-color: var(--link-hover);
-  border-radius: 50%;
-  cursor: pointer;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-}
-
-.carousel-controls label:hover {
-  opacity: 1;
-}
-
-/* Slide 1 */
-#slide1:checked ~ .carousel-inner {
-  transform: translateX(0%);
-}
-#slide1:checked ~ .carousel-inner .carousel-item:nth-child(1) {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Slide 2 */
-#slide2:checked ~ .carousel-inner {
-  transform: translateX(-100%);
-}
-#slide2:checked ~ .carousel-inner .carousel-item:nth-child(2) {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Slide 3 */
-#slide3:checked ~ .carousel-inner {
-  transform: translateX(-200%);
-}
-#slide3:checked ~ .carousel-inner .carousel-item:nth-child(3) {
-  opacity: 1;
-  transform: scale(1);
-}
-
+/* Contact Section Styles */
 .contact-section .group {
   display: flex;
   gap: 50px;
@@ -549,11 +678,7 @@ h2 {
   background-color: rgba(15, 23, 42, 0.9);
 }
 
-/* 
-  ============================================================
-  8. FOOTER
-  ============================================================
-*/
+/* Footer Styles */
 footer {
   /* Layout and positioning */
   background-color: var(--footer-bg);
@@ -595,12 +720,8 @@ footer .footer-right a:focus-visible {
   outline: none;
 }
 
-/* 
-  ============================================================
-  9. MEDIA QUERIES
-  ============================================================
-*/
- @media (max-width: 768px) {
+/* Media Queries */
+@media (max-width: 768px) {
   footer {
     flex-direction: column;
     gap: 20px;
@@ -612,7 +733,7 @@ footer .footer-right a:focus-visible {
   }
 }
 
- @media (max-width: 900px) {
+@media (max-width: 900px) {
   section {
     padding: 50px 30px;
     margin: 0 30px 50px;
@@ -627,13 +748,13 @@ footer .footer-right a:focus-visible {
   }
 }
 
- @media (max-width: 768px) {
+@media (max-width: 768px) {
   .contact-section .group {
     flex-direction: column;
   }
 }
 
- @media (max-width: 600px) {
+@media (max-width: 600px) {
   nav {
     padding: 0 20px;
   }
@@ -657,12 +778,8 @@ footer .footer-right a:focus-visible {
   }
 }
 
-/* 
-  ============================================================
-  10. PRINT STYLES
-  ============================================================
-*/
- @media print {
+/* Print Styles */
+@media print {
   body {
     background: #ffffff !important;
     color: #000000 !important;
