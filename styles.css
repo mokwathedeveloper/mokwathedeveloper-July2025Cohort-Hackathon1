@@ -1,1 +1,470 @@
-/* Your complete styles.css content */
+/*
+  STYLES.CSS
+  HACKATHON-WINNING LEVEL: Final professional adjustments for a standout portfolio.
+*/
+
+/* 1. CSS VARIABLES & GLOBAL STYLES
+============================================ */
+:root {
+  /* Theme Colors */
+  --page-bg: #0f172a; /* Dark blue background */
+  --section-bg: rgba(30, 41, 59, 0.5); /* Semi-transparent section background */
+  --text-primary: #f8fafc;
+  --link-primary: #38bdf8; /* Bright blue for links */
+  --link-hover: #7dd3fc; /* Lighter blue for hover */
+  --footer-bg: #0f172a;
+  --footer-text: #f8fafc;
+  --shadow-color: rgba(0, 0, 0, 0.6);
+  --gradient-start: #38bdf8;
+  --gradient-end: #818cf8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b, #0f172a);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  color: var(--text-primary);
+  max-width: 1400px;
+  margin: 0 auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--page-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--link-primary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--link-hover);
+}
+
+ @keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Scroll-Triggered Animations (Pure CSS) */
+ @keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  animation: slide-in 1s ease-out forwards;
+  animation-timeline: view();
+  animation-range-start: cover 0%;
+  animation-range-end: cover 40%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: var(--link-primary);
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Enhanced Accessibility: Focus-visible styles for keyboard navigation */
+:focus-visible {
+  outline: 3px solid var(--link-hover);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* 2. NAVBAR
+============================================ */
+#navbar-container {
+  /* Styles for the navbar will be added in the feature/navbar branch */
+}
+
+/* 3. SECTIONS
+============================================ */
+section {
+  padding: 60px 50px;
+  margin: 0 50px 60px;
+  background-color: var(--section-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Fluid Typography for Headings */
+h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin-bottom: 40px;
+    text-align: center;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+/* Hero Section - make it transparent to blend with body */
+#hero-container {
+  /* Styles for the hero section will be added in the feature/hero branch */
+}
+
+/* 4. CARDS (Skills, Projects, etc.)
+============================================ */
+.skills-section .cells .cell,
+.projects-section .project {
+  background-color: var(--section-bg);
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 10px;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+.skills-section .cells .cell:hover,
+.projects-section .project:hover {
+  transform: perspective(1000px) rotateY(10deg) rotateX(10deg) scale(1.1) translateZ(0);
+  -webkit-transform: perspective(1000px) rotateY(10deg) rotateX(10deg) scale(1.1) translateZ(0);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px var(--link-hover);
+}
+
+.skills-section .cells {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skills-section .cells .cell {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 220px;
+}
+
+.skills-section .cells .cell img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
+}
+
+.projects-section .project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.projects-section .project h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--link-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.projects-section .project h3 .project-icon {
+    color: var(--link-hover);
+    font-size: 20px;
+}
+
+/* 5. BUTTONS & LINKS
+============================================ */
+.hero-section .text .links a,
+.contact-section form button,
+.education-section .education-item a {
+  background: linear-gradient(90deg, var(--link-primary), var(--link-hover));
+  color: #0f172a;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+}
+
+.hero-section .text .links a:hover,
+.contact-section form button:hover,
+.education-section .education-item a:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.5);
+  color: #0f172a;
+  text-decoration: none;
+}
+
+.hero-section .text .links {
+  margin-top: 25px;
+}
+
+.hero-section .text .links a {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+/* 6. OTHER SECTIONS (Testimony, Contact)
+============================================ */
+.testimony-section .group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  background-color: var(--section-bg);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.testimony-section .group .person-details img {
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid var(--link-primary);
+}
+
+.contact-section .group {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.contact-section .group .text {
+    flex: 1;
+}
+
+.contact-section .group form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Floating Labels for Contact Form */
+.form-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.form-group input,
+.form-group textarea {
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid transparent;
+  background-color: rgba(15, 23, 42, 0.7);
+  color: var(--text-primary);
+  padding: 15px;
+  outline: none;
+  resize: none;
+  border-radius: 8px;
+  width: 100%;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.form-group label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: var(--text-primary);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus + label,
+.form-group input:valid + label,
+.form-group textarea:focus + label,
+.form-group textarea:valid + label {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  color: var(--link-primary);
+  background-color: var(--page-bg);
+  padding: 0 5px;
+}
+
+.contact-section .group form button {
+    width: 100%;
+}
+
+/* 7. FOOTER
+============================================ */
+#footer-container {
+  /* Styles for the footer will be added in the feature/footer branch */
+}
+
+/* 8. MEDIA QUERIES
+============================================ */
+ @media (max-width: 900px) {
+  section {
+    padding: 50px 30px;
+    margin: 0 30px 50px;
+  }
+
+  .hero-section {
+    gap: 40px;
+  }
+
+  .hero-section .headshot img {
+    width: 300px;
+  }
+}
+
+ @media (max-width: 768px) {
+  nav {
+      padding: 0 30px;
+      justify-content: space-between;
+  }
+
+  .hamburger-icon {
+    display: block;
+    z-index: 1001;
+    order: 2; /* Ensure hamburger is on the right */
+  }
+
+  nav .right {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: rgba(30, 41, 59, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+  }
+
+  nav .right a {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  nav .right a:hover {
+    background-color: var(--link-primary);
+    color: #0f172a;
+  }
+
+  /* The "checkbox hack" for the hamburger menu */
+  .hamburger-toggle:checked ~ .right {
+    max-height: 500px; /* Adjust as needed */
+  }
+
+  section {
+      padding: 40px 30px;
+      margin: 0 20px 40px;
+  }
+
+  .hero-section {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-section .text h1 {
+      text-align: center;
+  }
+
+  .contact-section .group {
+    flex-direction: column;
+  }
+
+  footer {
+      flex-direction: column;
+      gap: 20px;
+  }
+}
+
+ @media (max-width: 600px) {
+  nav {
+    padding: 0 20px;
+  }
+
+  nav .right a span {
+    display: inline-block;
+  }
+
+  nav .right a {
+    font-size: 18px;
+    margin-left: 0;
+  }
+
+  section {
+      padding: 30px 20px;
+      margin: 0 15px 30px;
+  }
+
+  .hero-section .headshot img {
+    width: 250px;
+  }
+}
+
+/* 9. PRINT STYLES
+============================================ */
+ @media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  nav, footer, .hero-section .links, .contact-section form button {
+    display: none !important;
+  }
+
+  section {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+    margin: 0 0 20px 0 !important;
+    padding: 20px !important;
+  }
+
+  h1, h2, h3 {
+    color: #000000 !important;
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+  }
+
+  a {
+    color: #0000ff !important;
+    text-decoration: underline !important;
+  }
+}
