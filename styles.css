@@ -114,8 +114,79 @@ a {
   2. NAVBAR
   ============================================================
 */
-#navbar-container {
-  /* Styles for the navbar will be added in the feature/navbar branch */
+nav {
+  /* Glassmorphism effect */
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  /* Layout and positioning */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 8px var(--shadow-color);
+  padding: 0 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav .left a {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--link-primary);
+}
+
+nav .right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav .right a {
+  color: var(--text-primary);
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+  margin-left: 0;
+}
+
+/* Underline animation on hover */
+nav .right a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: var(--link-hover);
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+nav .right a:hover::after {
+  width: 100%;
+}
+
+nav .right a:hover {
+  color: var(--link-hover);
+}
+
+nav .right a span {
+  margin-left: 5px;
+}
+
+/* CSS-only Hamburger Menu */
+.hamburger-toggle {
+  display: none;
+}
+
+.hamburger-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
 }
 
 /* 
@@ -154,8 +225,46 @@ h2 {
   4. HERO SECTION
   ============================================================
 */
-#hero-container {
-  /* Styles for the hero section will be added in the feature/hero branch */
+.hero-section {
+  /* Layout and positioning */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  margin-top: 50px;
+  
+  /* Transparent background to blend with the body */
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  text-align: left;
+}
+
+.hero-section .text {
+    flex: 1;
+}
+
+.hero-section .text h1 {
+  text-align: left;
+  /* Gradient text effect */
+  background: linear-gradient(90deg, #f8fafc, #a7b2c1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.hero-section .headshot {
+    flex-shrink: 0;
+    position: relative;
+}
+
+.hero-section .headshot img {
+  width: 350px;
+  border-radius: 50%;
+  border: 3px solid var(--link-primary);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* 
