@@ -1,10 +1,18 @@
 /*
+  ============================================================
   STYLES.CSS
-  HACKATHON-WINNING LEVEL: Final professional adjustments for a standout portfolio.
+  
+  Author: Mokwa Moffat Ohuru
+  Description: This stylesheet contains the styles for the 
+               professional portfolio of Mokwa Moffat Ohuru.
+  ============================================================
 */
 
-/* 1. CSS VARIABLES & GLOBAL STYLES
-============================================ */
+/* 
+  ============================================================
+  1. CSS VARIABLES & GLOBAL STYLES
+  ============================================================
+*/
 :root {
   /* Theme Colors */
   --page-bg: #0f172a; /* Dark blue background */
@@ -58,13 +66,14 @@ body {
   background: var(--link-hover);
 }
 
+/* Animated Gradient Background */
  @keyframes gradientAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Scroll-Triggered Animations (Pure CSS) */
+/* Scroll-Triggered Animations */
  @keyframes slide-in {
   from {
     opacity: 0;
@@ -100,81 +109,20 @@ a {
   border-radius: 4px;
 }
 
-/* 2. NAVBAR
-============================================ */
-nav {
-  background: rgba(30, 41, 59, 0.6);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 1px 8px var(--shadow-color);
-  padding: 0 50px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+/* 
+  ============================================================
+  2. NAVBAR
+  ============================================================
+*/
+#navbar-container {
+  /* Styles for the navbar will be added in the feature/navbar branch */
 }
 
-nav .left a {
-    font-size: 26px;
-    font-weight: 700;
-    color: var(--link-primary);
-}
-
-nav .right {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-nav .right a {
-  color: var(--text-primary);
-  font-weight: 500;
-  position: relative;
-  transition: color 0.3s ease;
-  margin-left: 0;
-}
-
-nav .right a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background-color: var(--link-hover);
-  bottom: -5px;
-  left: 0;
-  transition: width 0.3s ease;
-}
-
-nav .right a:hover::after {
-  width: 100%;
-}
-
-nav .right a:hover {
-  color: var(--link-hover);
-}
-
-nav .right a span {
-  margin-left: 5px;
-}
-
-/* Hamburger Menu (CSS-only) */
-.hamburger-toggle {
-  display: none;
-}
-
-.hamburger-icon {
-  display: none;
-  cursor: pointer;
-  font-size: 24px;
-}
-
-/* 3. SECTIONS
-============================================ */
+/* 
+  ============================================================
+  3. SECTIONS
+  ============================================================
+*/
 section {
   padding: 60px 50px;
   margin: 0 50px 60px;
@@ -201,13 +149,20 @@ h2 {
     text-fill-color: transparent;
 }
 
-/* Hero Section - make it transparent to blend with body */
+/* 
+  ============================================================
+  4. HERO SECTION
+  ============================================================
+*/
 .hero-section {
+  /* Layout and positioning */
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 60px;
   margin-top: 50px;
+  
+  /* Transparent background to blend with the body */
   background-color: transparent !important;
   box-shadow: none !important;
   border: none !important;
@@ -220,6 +175,7 @@ h2 {
 
 .hero-section .text h1 {
   text-align: left;
+  /* Gradient text effect */
   background: linear-gradient(90deg, #f8fafc, #a7b2c1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -240,8 +196,11 @@ h2 {
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 4. CARDS (Skills, Projects, etc.)
-============================================ */
+/* 
+  ============================================================
+  5. CARDS (Skills, Projects, etc.)
+  ============================================================
+*/
 .skills-section .cells .cell,
 .projects-section .project {
   background-color: var(--section-bg);
@@ -303,8 +262,11 @@ h2 {
     font-size: 20px;
 }
 
-/* 5. BUTTONS & LINKS
-============================================ */
+/* 
+  ============================================================
+  6. BUTTONS & LINKS
+  ============================================================
+*/
 .hero-section .text .links a,
 .contact-section form button,
 .education-section .education-item a {
@@ -339,8 +301,11 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* 6. OTHER SECTIONS (Testimony, Contact)
-============================================ */
+/* 
+  ============================================================
+  7. OTHER SECTIONS (Testimony, Contact)
+  ============================================================
+*/
 .testimony-section .group {
   display: flex;
   flex-direction: column;
@@ -421,14 +386,20 @@ h2 {
     width: 100%;
 }
 
-/* 7. FOOTER
-============================================ */
+/* 
+  ============================================================
+  8. FOOTER
+  ============================================================
+*/
 #footer-container {
   /* Styles for the footer will be added in the feature/footer branch */
 }
 
-/* 8. MEDIA QUERIES
-============================================ */
+/* 
+  ============================================================
+  9. MEDIA QUERIES
+  ============================================================
+*/
  @media (max-width: 900px) {
   section {
     padding: 50px 30px;
@@ -538,8 +509,11 @@ h2 {
   }
 }
 
-/* 9. PRINT STYLES
-============================================ */
+/* 
+  ============================================================
+  10. PRINT STYLES
+  ============================================================
+*/
  @media print {
   body {
     background: #ffffff !important;
