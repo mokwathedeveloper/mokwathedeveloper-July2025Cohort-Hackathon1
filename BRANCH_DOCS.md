@@ -1,12 +1,21 @@
-# Main Branch Documentation
+# Navbar Branch Documentation
 
-This is the production-ready branch containing the complete portfolio implementation.
+This branch focuses on developing the responsive navigation bar.
 
 ## Features
-- Complete HTML structure with all sections
-- Full CSS styling with animations and responsive design
-- Professional README with project overview
-- Print stylesheet for professional printing
+- Responsive design with hamburger menu
+- Smooth transitions and animations
+- Accessible navigation
+- Sticky positioning
+- Glassmorphism effect
 
-## Deployment
-This branch is automatically deployed to the production environment via GitHub Pages.
+## Breakpoints
+- Desktop: 992px and above
+- Tablet: 768px - 991px
+- Mobile: 767px and below
+
+## Accessibility Features
+- Keyboard navigable
+- Proper ARIA attributes
+- Focus states for interactive elements
+- Semantic HTML structure
