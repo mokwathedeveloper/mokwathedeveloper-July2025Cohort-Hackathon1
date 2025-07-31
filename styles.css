@@ -154,46 +154,8 @@ h2 {
   4. HERO SECTION
   ============================================================
 */
-.hero-section {
-  /* Layout and positioning */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-  margin-top: 50px;
-  
-  /* Transparent background to blend with the body */
-  background-color: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-  text-align: left;
-}
-
-.hero-section .text {
-    flex: 1;
-}
-
-.hero-section .text h1 {
-  text-align: left;
-  /* Gradient text effect */
-  background: linear-gradient(90deg, #f8fafc, #a7b2c1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-}
-
-.hero-section .headshot {
-    flex-shrink: 0;
-    position: relative;
-}
-
-.hero-section .headshot img {
-  width: 350px;
-  border-radius: 50%;
-  border: 3px solid var(--link-primary);
-  box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+#hero-container {
+  /* Styles for the hero section will be added in the feature/hero branch */
 }
 
 /* 
@@ -391,8 +353,45 @@ h2 {
   8. FOOTER
   ============================================================
 */
-#footer-container {
-  /* Styles for the footer will be added in the feature/footer branch */
+footer {
+  /* Layout and positioning */
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 25px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+footer .footer-left p {
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+footer .footer-right a {
+  color: var(--footer-text);
+  margin-left: 12px;
+  font-size: 18px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+footer .footer-right a:first-child {
+  margin-left: 0;
+}
+
+/* Hover effect for social media icons */
+footer .footer-right a:hover,
+footer .footer-right a:focus-visible {
+  color: var(--link-hover);
+  transform: scale(1.2);
+  outline: none;
 }
 
 /* 
@@ -400,6 +399,18 @@ h2 {
   9. MEDIA QUERIES
   ============================================================
 */
+ @media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 15px;
+    text-align: center;
+  }
+  footer .footer-right {
+    margin-top: 10px;
+  }
+}
+
  @media (max-width: 900px) {
   section {
     padding: 50px 30px;
