@@ -102,8 +102,75 @@ a {
 
 /* 2. NAVBAR
 ============================================ */
-#navbar-container {
-  /* Styles for the navbar will be added in the feature/navbar branch */
+nav {
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 8px var(--shadow-color);
+  padding: 0 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav .left a {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--link-primary);
+}
+
+nav .right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav .right a {
+  color: var(--text-primary);
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+  margin-left: 0;
+}
+
+nav .right a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: var(--link-hover);
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+nav .right a:hover::after {
+  width: 100%;
+}
+
+nav .right a:hover {
+  color: var(--link-hover);
+}
+
+nav .right a span {
+  margin-left: 5px;
+}
+
+/* Hamburger Menu (CSS-only) */
+.hamburger-toggle {
+  display: none;
+}
+
+.hamburger-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
 }
 
 /* 3. SECTIONS
