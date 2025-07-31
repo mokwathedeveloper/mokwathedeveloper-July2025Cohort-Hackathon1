@@ -1,12 +1,15 @@
-# Main Branch Documentation
+# Footer Branch Documentation
 
-This is the production-ready branch containing the complete portfolio implementation.
+This branch focuses on the development of the footer for the portfolio website.
 
-## Features
-- Complete HTML structure with all sections
-- Full CSS styling with animations and responsive design
-- Professional README with project overview
-- Print stylesheet for professional printing
+## Features Implemented
 
-## Deployment
-This branch is automatically deployed to the production environment via GitHub Pages.
+- **Copyright Information:** The footer includes a copyright notice to protect the intellectual property of the portfolio.
+- **Social Media Links:** The footer includes links to my GitHub and LinkedIn profiles, allowing visitors to easily connect with me on social media.
+- **Email Contact:** The footer includes a link to my email address, providing a direct way for visitors to contact me.
+- **Responsive Design:** The footer is fully responsive and adapts to different screen sizes, ensuring a seamless user experience on desktops, tablets, and mobile devices.
+
+## Component Structure
+
+- **`index.html`:** The HTML structure for the footer is contained within a `<footer>` element. It includes a `div` for the copyright information and a `div` for the social media links.
+- **`styles.css`:** The CSS for the footer is implemented using a mobile-first approach. It includes styles for the layout, typography, and the social media link hover effects.
