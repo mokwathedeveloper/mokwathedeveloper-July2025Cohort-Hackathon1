@@ -1,10 +1,18 @@
 /*
+  ============================================================
   STYLES.CSS
-  HACKATHON-WINNING LEVEL: Final professional adjustments for a standout portfolio.
+  
+  Author: Mokwa Moffat Ohuru
+  Description: This stylesheet contains the styles for the 
+               professional portfolio of Mokwa Moffat Ohuru.
+  ============================================================
 */
 
-/* 1. CSS VARIABLES & GLOBAL STYLES
-============================================ */
+/* 
+  ============================================================
+  1. CSS VARIABLES & GLOBAL STYLES
+  ============================================================
+*/
 :root {
   /* Theme Colors */
   --page-bg: #0f172a; /* Dark blue background */
@@ -58,13 +66,14 @@ body {
   background: var(--link-hover);
 }
 
+/* Animated Gradient Background */
  @keyframes gradientAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Scroll-Triggered Animations (Pure CSS) */
+/* Scroll-Triggered Animations */
  @keyframes slide-in {
   from {
     opacity: 0;
@@ -100,14 +109,20 @@ a {
   border-radius: 4px;
 }
 
-/* 2. NAVBAR
-============================================ */
+/* 
+  ============================================================
+  2. NAVBAR
+  ============================================================
+*/
 #navbar-container {
   /* Styles for the navbar will be added in the feature/navbar branch */
 }
 
-/* 3. SECTIONS
-============================================ */
+/* 
+  ============================================================
+  3. SECTIONS
+  ============================================================
+*/
 section {
   padding: 60px 50px;
   margin: 0 50px 60px;
@@ -134,13 +149,20 @@ h2 {
     text-fill-color: transparent;
 }
 
-/* Hero Section - make it transparent to blend with body */
+/* 
+  ============================================================
+  4. HERO SECTION
+  ============================================================
+*/
 #hero-container {
   /* Styles for the hero section will be added in the feature/hero branch */
 }
 
-/* 4. CARDS (Skills, Projects, etc.)
-============================================ */
+/* 
+  ============================================================
+  5. CARDS (Skills, Projects, etc.)
+  ============================================================
+*/
 .skills-section .cells .cell,
 .projects-section .project {
   background-color: var(--section-bg);
@@ -202,8 +224,11 @@ h2 {
     font-size: 20px;
 }
 
-/* 5. BUTTONS & LINKS
-============================================ */
+/* 
+  ============================================================
+  6. BUTTONS & LINKS
+  ============================================================
+*/
 .hero-section .text .links a,
 .contact-section form button,
 .education-section .education-item a {
@@ -238,8 +263,11 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* 6. OTHER SECTIONS (Testimony, Contact)
-============================================ */
+/* 
+  ============================================================
+  7. OTHER SECTIONS (Testimony, Contact)
+  ============================================================
+*/
 .testimony-section .group {
   display: flex;
   flex-direction: column;
@@ -320,9 +348,13 @@ h2 {
     width: 100%;
 }
 
-/* 7. FOOTER
-============================================ */
+/* 
+  ============================================================
+  8. FOOTER
+  ============================================================
+*/
 footer {
+  /* Layout and positioning */
   background-color: var(--footer-bg);
   color: var(--footer-text);
   padding: 25px 50px;
@@ -354,6 +386,7 @@ footer .footer-right a:first-child {
   margin-left: 0;
 }
 
+/* Hover effect for social media icons */
 footer .footer-right a:hover,
 footer .footer-right a:focus-visible {
   color: var(--link-hover);
@@ -361,6 +394,11 @@ footer .footer-right a:focus-visible {
   outline: none;
 }
 
+/* 
+  ============================================================
+  9. MEDIA QUERIES
+  ============================================================
+*/
  @media (max-width: 768px) {
   footer {
     flex-direction: column;
@@ -373,8 +411,6 @@ footer .footer-right a:focus-visible {
   }
 }
 
-/* 8. MEDIA QUERIES
-============================================ */
  @media (max-width: 900px) {
   section {
     padding: 50px 30px;
@@ -484,8 +520,11 @@ footer .footer-right a:focus-visible {
   }
 }
 
-/* 9. PRINT STYLES
-============================================ */
+/* 
+  ============================================================
+  10. PRINT STYLES
+  ============================================================
+*/
  @media print {
   body {
     background: #ffffff !important;
