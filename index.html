@@ -131,22 +131,39 @@
       </div>
     </section>
 
-    <!-- SECTION 3: Testimony -->
-    <section id="testimony" class="testimony-section">
-      <h2>Testimony</h2>
-
-      <div class="group">
-        <div class="person-details">
-          <img src="images/testimony-headshot.webp" alt="Jane Smith headshot">
-          <p>Jane Smith</p>
-          <p>Senior Developer at TechCorp</p>
-        </div>
-
-        <div class="text">
-                    "Mokwa is an exceptional developer with a keen eye for detail and a strong commitment to delivering high-quality work. Their ability to quickly grasp complex concepts and translate them into elegant code is truly impressive. A valuable asset to any team!"
-        </div>
+    <section id="testimonials" class="testimonial-section">
+  <h2 class="section-title">Testimonials</h2>
+  <div class="testimonial-carousel">
+    <!-- Navigation (hidden radio inputs) -->
+    <input type="radio" name="testimonial" id="testimonial1" checked>
+    <input type="radio" name="testimonial" id="testimonial2">
+    <input type="radio" name="testimonial" id="testimonial3">
+    <!-- Carousel slides -->
+    <div class="carousel-slides">
+      <div class="testimonial-card">
+        <img src="images/testimony.webp" alt="Jane Doe" class="testimonial-img">
+        <p class="testimonial-text">"Jane provided exceptional design work, exceeding our expectations at every turn."</p>
+        <p class="testimonial-author">Jane Doe, CEO of ExampleCorp</p>
       </div>
-    </section>
+      <div class="testimonial-card">
+        <img src="images/testimony1.webp" alt="John Smith" class="testimonial-img">
+        <p class="testimonial-text">"Working with Moffat was a pleasure; his attention to detail transformed our project."</p>
+        <p class="testimonial-author">John Smith, Founder of StartupInc</p>
+      </div>
+      <div class="testimonial-card">
+        <img src="images/testimony2.webp" alt="Alice Johnson" class="testimonial-img">
+        <p class="testimonial-text">"The website redesign by Moffat enhanced our brand's image beyond what we imagined."</p>
+        <p class="testimonial-author">Alice Johnson, Designer</p>
+      </div>
+    </div>
+    <!-- Dot navigation -->
+    <div class="carousel-dots">
+      <label for="testimonial1" aria-label="View Testimonial 1"></label>
+      <label for="testimonial2" aria-label="View Testimonial 2"></label>
+      <label for="testimonial3" aria-label="View Testimonial 3"></label>
+    </div>
+  </div>
+</section>
 
     <!-- SECTION 4: Projects -->
     <section id="projects" class="projects-section">
