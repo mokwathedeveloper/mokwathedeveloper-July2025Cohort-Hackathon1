@@ -1,2 +1,179 @@
 <!DOCTYPE html>
-<!-- Your complete index.html content -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO & Social Sharing Meta Tags -->
+  <title>Mokwa Moffat Ohuru | Software Developer Portfolio</title>
+  <meta name="description" content="The professional portfolio of Mokwa Moffat Ohuru, a passionate software developer specializing in front-end technologies and creating impactful web applications.">
+  <meta property="og:title" content="Mokwa Moffat Ohuru | Software Developer Portfolio">
+  <meta property="og:description" content="Explore the projects and skills of Mokwa Moffat Ohuru, a results-driven software developer.">
+  <meta property="og:image" content="https://i.imgur.com/6bT8h2k.png"> <!-- Replace with a link to your actual preview image -->
+  <meta property="og:url" content="https://mokwathedeveloper.github.io/portfolio/"> <!-- Replace with your actual deployed portfolio URL -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon (add your favicon file to the 'images' folder) -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght @700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <div id="navbar-container"></div>
+
+  <!-- Main Content -->
+  <main class="content-fade-in">
+    <!-- SECTION 1: Hero -->
+    <div id="hero-container"></div>
+
+    <!-- SECTION 2: Skills -->
+    <section id="skills" class="skills-section">
+      <h2>Skills</h2>
+      <div class="text">
+        I am proficient in a variety of programming languages and technologies, constantly expanding my skillset to build robust and scalable applications. My core competencies include:
+      </div>
+
+      <div class="cells">
+        <div class="cell">
+          <img src="images/html-logo.webp" alt="html logo">
+          <span>HTML</span>
+        </div>
+        
+        <div class="cell">
+          <img src="images/css-logo.webp" alt="css logo">
+          <span>CSS</span>
+        </div>
+        
+        <div class="cell">
+          <img src="images/javascript-logo.webp" alt="javascript logo">
+          <span>JavaScript</span>
+        </div>
+        
+        <div class="cell">
+          <img src="images/node-logo.webp" alt="node logo">
+          <span>Node.js</span>
+        </div>
+        
+        <div class="cell">
+          <img src="images/react-logo.webp" alt="react logo">
+          <span>React.js</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Testimony -->
+    <section id="testimony" class="testimony-section">
+      <h2>Testimony</h2>
+
+      <div class="group">
+        <div class="person-details">
+          <img src="images/testimony-headshot.webp" alt="Jane Smith headshot">
+          <p>Jane Smith</p>
+          <p>Senior Developer at TechCorp</p>
+        </div>
+
+        <div class="text">
+                    "Mokwa is an exceptional developer with a keen eye for detail and a strong commitment to delivering high-quality work. Their ability to quickly grasp complex concepts and translate them into elegant code is truly impressive. A valuable asset to any team!"
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Projects -->
+    <section id="projects" class="projects-section">
+      <h2>Projects</h2>
+      <div class="project-list">
+        <div class="project">
+          <h3><i class="fa-solid fa-fingerprint project-icon"></i> DID Credential App</h3>
+          <p>A full-stack decentralized identity and credential issuance platform using React, Node.js, MongoDB, and ECDSA cryptographic signing.</p>
+          <a href="https://github.com/mokwathedeveloper/did-credential-app" target="_blank" rel="noopener noreferrer">View Project</a>
+        </div>
+
+        <div class="project">
+          <h3><i class="fa-solid fa-leaf project-icon"></i> Node Farm React Frontend</h3>
+          <p>A responsive React + Bootstrap frontend for a dynamic Node.js backend. Displays product listings, details, and interactive cart UI.</p>
+          <a href="https://github.com/mokwathedeveloper/node-farm-frontend" target="_blank" rel="noopener noreferrer">View Project</a>
+        </div>
+
+        <div class="project">
+          <h3><i class="fa-solid fa-store project-icon"></i> Cosmetics eCommerce App</h3>
+          <p>An advanced multi-role eCommerce site for cosmetics, built with Supabase, Tailwind CSS, and Next.js App Router.</p>
+          <a href="https://github.com/mokwathedeveloper/eccomasapp" target="_blank" rel="noopener noreferrer">View Project</a>
+        </div>
+
+        <div class="project">
+          <h3><i class="fa-solid fa-hand-holding-dollar project-icon"></i> Mpesa Donation Platform</h3>
+          <p>A lightweight SvelteKit-based donation platform integrating Safaricom Daraja API to process anonymous contributions for social causes.</p>
+          <a href="https://github.com/mokwathedeveloper/svelte-mpesa-donation-app" target="_blank" rel="noopener noreferrer">View Project</a>
+        </div>
+
+        <div class="project">
+          <h3><i class="fa-solid fa-map-location-dot project-icon"></i> Surveyor Land Services</h3>
+          <p>A full-stack land surveying web app that supports booking, listings, and client interactions, built using React, Express, and MongoDB.</p>
+          <a href="https://github.com/mokwathedeveloper/surveyorapp" target="_blank" rel="noopener noreferrer">View Project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Education -->
+    <section id="education" class="education-section content-fade-in">
+      <h2>Educational Background</h2>
+      <div class="education-item">
+        <h3>B.Sc. in Computer Science</h3>
+        <p><strong>Institution:</strong> University of Tech Excellence</p>
+        <p><strong>Graduation Year:</strong> 2024</p>
+        <a href="#" download="Mokwa_Ohuru_CV.pdf">Download CV</a>
+      </div>
+    </section>
+
+    <!-- SECTION 6: Interests -->
+    <section id="interests" class="interests-section content-fade-in">
+      <h2>Interests</h2>
+      <p>I am passionate about exploring the intersection of design and technology. My interests include building scalable front-end architectures, contributing to open-source projects, and diving into the world of 3D web graphics with technologies like WebGL and Three.js. I am always eager to learn and apply new skills to create innovative and engaging user experiences.</p>
+    </section>
+
+    <!-- SECTION 7: Contact -->
+    <section id="contact" class="contact-section">
+      <h2>Contact</h2>
+
+      <div class="group">
+        <div class="text">
+          I am always open to new opportunities and collaborations. Whether you have a project in mind, a question, or just want to connect, feel free to reach out. I look forward to hearing from you!
+        </div>
+
+        <form>
+          <div class="form-group">
+            <input type="text" id="name" autocomplete="name" required>
+            <label for="name">Name</label>
+          </div>
+
+          <div class_="form-group">
+            <input type="email" id="email" autocomplete="email" required>
+            <label for="email">Email</label>
+          </div>
+
+          <div class="form-group">
+            <textarea id="message" cols="30" rows="10" required></textarea>
+            <label for="message">Message</label>
+          </div>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-container"></div>
+</body>
+</html>
