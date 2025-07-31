@@ -1,15 +1,15 @@
-# Footer Branch Documentation
+# Contact Responsive Branch Documentation
 
-This branch focuses on the development of the footer for the portfolio website.
+This branch focuses on implementing responsive design for the contact section and improving its form styling.
 
 ## Features Implemented
 
-- **Copyright Information:** The footer includes a copyright notice to protect the intellectual property of the portfolio.
-- **Social Media Links:** The footer includes links to my GitHub and LinkedIn profiles, allowing visitors to easily connect with me on social media.
-- **Email Contact:** The footer includes a link to my email address, providing a direct way for visitors to contact me.
-- **Responsive Design:** The footer is fully responsive and adapts to different screen sizes, ensuring a seamless user experience on desktops, tablets, and mobile devices.
+- **Responsive Layout:** The contact section's layout now adapts gracefully to various screen sizes, ensuring optimal display on mobile devices, tablets, and desktops.
+- **Vertical Stacking:** On smaller viewports, the contact form and text content within the `.contact-section .group` are now stacked vertically, enhancing readability and user experience.
+- **Improved Form Styling:** The contact form inputs, including the email textbox, have been professionally styled for visual consistency and improved user interaction.
+- **Typo Correction:** A typo in the `class` attribute of the email input's form group in `index.html` has been corrected, ensuring proper application of CSS styles.
 
 ## Component Structure
 
-- **`index.html`:** The HTML structure for the footer is contained within a `<footer>` element. It includes a `div` for the copyright information and a `div` for the social media links.
-- **`styles.css`:** The CSS for the footer is implemented using a mobile-first approach. It includes styles for the layout, typography, and the social media link hover effects.
+- **`styles.css`:** Contains the media queries for responsive adjustments and enhanced styling for the contact form elements.
+- **`index.html`:** Includes the structural HTML for the contact section and the corrected `class` attribute for the email input's form group.
