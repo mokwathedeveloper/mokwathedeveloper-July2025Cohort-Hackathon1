@@ -58,3 +58,5 @@ echo " Add this description manually:"
 echo "Elite Personal Portfolio built with HTML5 and advanced CSS3 (scroll-triggered animations, 3D hover effects, glassmorphism). Built for PLP July 2025 Hackathon."
 echo ""
 echo "🏷 Tags: portfolio, html5, css3, responsive-design, animations, personal-site"
+
+am getting this error 
