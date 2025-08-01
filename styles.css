@@ -558,7 +558,7 @@ h2 {
 #testimonial1:checked ~ .carousel-dots label[for="testimonial1"],
 #testimonial2:checked ~ .carousel-dots label[for="testimonial2"],
 #testimonial3:checked ~ .carousel-dots label[for="testimonial3"] {
-  background: #007bff;
+  background: var(--link-primary);
 }
 /* Responsive adjustments */
  @media (min-width: 600px) {
