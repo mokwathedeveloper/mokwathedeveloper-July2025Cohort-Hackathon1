@@ -674,7 +674,7 @@ h2 {
 /* Contact Section Styles */
 .contact-section .group {
   display: flex;
-  gap: 50px;
+  gap: clamp(20px, 5vw, 50px);
   align-items: flex-start;
 }
 
