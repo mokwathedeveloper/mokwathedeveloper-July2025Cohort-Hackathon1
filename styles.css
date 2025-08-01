@@ -492,7 +492,7 @@ h2 {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
-  color: #fff; /* text inside card */
+  color: var(--text-primary); /* text inside card */
   display: flex;
   flex-direction: column;
   align-items: center;
