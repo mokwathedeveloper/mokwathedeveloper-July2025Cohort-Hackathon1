@@ -616,11 +616,11 @@ h2 {
 .project h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #fff;
+  color: var(--text-primary);
 }
 
 .project h3 a {
-  color: #fff;
+  color: var(--text-primary);
   text-decoration: none;
 }
 
