@@ -257,8 +257,8 @@ nav .right a span {
   ============================================================
 */
 section {
-  padding: clamp(40px, 5vw, 60px) clamp(30px, 5vw, 50px);
-  margin: 0 clamp(30px, 5vw, 50px) clamp(40px, 5vw, 60px);
+  padding: var(--section-padding-y) var(--section-padding-x);
+  margin: 0 var(--section-margin-x) var(--section-margin-bottom);
   background-color: var(--section-bg);
   border-radius: 12px;
   box-shadow: 0 4px 12px var(--shadow-color);
@@ -277,9 +277,8 @@ h2 {
     text-align: center;
     background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
+    color: transparent;
 }
 
 /* 
@@ -578,10 +577,8 @@ h2 {
 
 .project-list {
   display: grid;
-  grid-template-columns: 1fr; /* Single column on small screens */
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(280px, 40vw, 350px), 1fr));
+  gap: clamp(20px, 4vw, 30px);
 }
 
 .project {
@@ -630,12 +627,6 @@ h2 {
   list-style: none;
   padding: 0;
   margin-bottom: 15px;
-}
-
-.project ul li {
-  margin-bottom: 8px;
-  position: relative;
-  padding-left: 20px;
 }
 
 .project ul li::before {
