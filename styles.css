@@ -598,14 +598,14 @@ h2 {
 }
 
 .project {
-  background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+  background: var(--section-bg); /* Glassmorphism effect */
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   padding: 30px;
   text-align: left;
-  color: #fff;
+  color: var(--text-primary);
   transition: transform 0.3s ease;
 }
 
