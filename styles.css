@@ -647,7 +647,7 @@ h2 {
 
 .project ul li::before {
   content: '•'; /* Custom bullet point */
-  color: #00bcd4;
+  color: var(--link-primary);
   position: absolute;
   left: 0;
 }
