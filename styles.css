@@ -377,8 +377,8 @@ h2 {
 
 .projects-section .project-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(280px, 40vw, 350px), 1fr));
+  gap: clamp(20px, 4vw, 30px);
 }
 
 .projects-section .project h3 {
