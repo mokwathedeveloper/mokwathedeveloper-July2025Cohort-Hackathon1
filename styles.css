@@ -722,6 +722,50 @@ footer .footer-right a:focus-visible {
 
 /* Media Queries */
 @media (max-width: 768px) {
+  nav {
+      padding: 0 30px;
+      justify-content: space-between;
+  }
+
+  .hamburger-icon {
+    display: block;
+    z-index: 1001;
+    order: 2; /* Ensure hamburger is on the right */
+  }
+
+  nav .right {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: rgba(30, 41, 59, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+  }
+
+  nav .right a {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  nav .right a:hover {
+    background-color: var(--link-primary);
+    color: #0f172a;
+  }
+
+  /* The "checkbox hack" for the hamburger menu */
+  .hamburger-toggle:checked ~ .right {
+    max-height: 500px; /* Adjust as needed */
+  }
+
   footer {
     flex-direction: column;
     gap: 20px;
