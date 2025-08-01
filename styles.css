@@ -249,9 +249,8 @@ h2 {
   /* Gradient text effect */
   background: linear-gradient(90deg, #f8fafc, #a7b2c1);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
+  color: transparent;
 }
 
 .hero-section .headshot {
