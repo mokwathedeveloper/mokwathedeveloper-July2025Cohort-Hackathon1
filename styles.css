@@ -25,6 +25,13 @@
   --shadow-color: rgba(0, 0, 0, 0.6);
   --gradient-start: #38bdf8;
   --gradient-end: #818cf8;
+
+  /* Responsive Spacing Variables */
+  --section-padding-x: clamp(30px, 5vw, 50px);
+  --section-padding-y: clamp(40px, 5vw, 60px);
+  --section-margin-x: clamp(30px, 5vw, 50px);
+  --section-margin-bottom: clamp(40px, 5vw, 60px);
+  --nav-padding-x: clamp(30px, 5vw, 50px);
 }
 
 * {
@@ -46,6 +53,23 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Main content fade-in animation */
+.content-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+  opacity: 0; /* Start invisible */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Custom Scrollbar */
@@ -92,6 +116,43 @@ section {
   animation-range-end: cover 40%;
 }
 
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  section {
+    animation: none !important;
+  }
+
+  * {
+    transition: none !important;
+  }
+
+  .skills-section .cells .cell:hover,
+  .projects-section .project:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  nav .right a::after {
+    transition: none !important;
+  }
+
+  nav .right a:hover {
+    color: var(--link-hover);
+  }
+
+  .hero-section .headshot img {
+    transition: none !important;
+  }
+
+  footer .footer-right a {
+    transition: none !important;
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
 }
@@ -123,7 +184,7 @@ nav {
   /* Layout and positioning */
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 1px 8px var(--shadow-color);
-  padding: 0 50px;
+  padding: 0 var(--nav-padding-x);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -152,6 +213,7 @@ nav .right a {
   position: relative;
   transition: color 0.3s ease;
   margin-left: 0;
+  font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
 /* Underline animation on hover */
@@ -195,8 +257,8 @@ nav .right a span {
   ============================================================
 */
 section {
-  padding: 60px 50px;
-  margin: 0 50px 60px;
+  padding: clamp(40px, 5vw, 60px) clamp(30px, 5vw, 50px);
+  margin: 0 clamp(30px, 5vw, 50px) clamp(40px, 5vw, 60px);
   background-color: var(--section-bg);
   border-radius: 12px;
   box-shadow: 0 4px 12px var(--shadow-color);
@@ -319,7 +381,7 @@ h2 {
 }
 
 .projects-section .project h3 {
-    font-size: 24px;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
     margin-bottom: 10px;
     color: var(--link-primary);
     display: flex;
@@ -765,6 +827,29 @@ footer .footer-right a:focus-visible {
     max-height: 500px; /* Adjust as needed */
   }
 
+  section {
+    padding: 40px 30px;
+    margin: 0 20px 40px;
+  }
+
+  .hero-section {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-section .headshot img {
+    width: 300px;
+  }
+
+  .hero-section .text h1 {
+      text-align: center;
+  }
+
+  .contact-section .group {
+    flex-direction: column;
+  }
+
   footer {
     flex-direction: column;
     gap: 20px;
@@ -773,27 +858,6 @@ footer .footer-right a:focus-visible {
   }
   footer .footer-right {
     margin-top: 10px;
-  }
-}
-
-@media (max-width: 900px) {
-  section {
-    padding: 50px 30px;
-    margin: 0 30px 50px;
-  }
-
-  .hero-section {
-    gap: 40px;
-  }
-
-  .hero-section .headshot img {
-    width: 300px;
-  }
-}
-
-@media (max-width: 768px) {
-  .contact-section .group {
-    flex-direction: column;
   }
 }
 
