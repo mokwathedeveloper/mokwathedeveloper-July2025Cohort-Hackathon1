@@ -766,6 +766,29 @@ footer .footer-right a:focus-visible {
     max-height: 500px; /* Adjust as needed */
   }
 
+  section {
+    padding: 40px 30px;
+    margin: 0 20px 40px;
+  }
+
+  .hero-section {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-section .headshot img {
+    width: 300px;
+  }
+
+  .hero-section .text h1 {
+      text-align: center;
+  }
+
+  .contact-section .group {
+    flex-direction: column;
+  }
+
   footer {
     flex-direction: column;
     gap: 20px;
@@ -774,27 +797,6 @@ footer .footer-right a:focus-visible {
   }
   footer .footer-right {
     margin-top: 10px;
-  }
-}
-
-@media (max-width: 900px) {
-  section {
-    padding: 50px 30px;
-    margin: 0 30px 50px;
-  }
-
-  .hero-section {
-    gap: 40px;
-  }
-
-  .hero-section .headshot img {
-    width: 300px;
-  }
-}
-
-@media (max-width: 768px) {
-  .contact-section .group {
-    flex-direction: column;
   }
 }
 
