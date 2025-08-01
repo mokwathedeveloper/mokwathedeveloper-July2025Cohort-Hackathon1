@@ -363,8 +363,9 @@ h2 {
 .skills-section .cells .cell {
   display: flex;
   align-items: center;
-  gap: 15px;
-  width: 220px;
+  gap: clamp(10px, 2vw, 15px);
+  flex: 1 1 200px; /* Allow items to grow and shrink, with a base of 200px */
+  max-width: 250px; /* Prevent cells from becoming too wide on large screens */
 }
 
 .skills-section .cells .cell img {
