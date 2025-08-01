@@ -175,6 +175,22 @@ a {
   2. NAVBAR
   ============================================================
 */
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--link-primary);
+  color: var(--page-bg);
+  padding: 8px;
+  z-index: 9999;
+  -webkit-transition: top 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out;
+}
+
+.skip-link:focus {
+  top: 0;
+}
 nav {
   /* Glassmorphism effect */
   background: rgba(30, 41, 59, 0.6);
