@@ -204,7 +204,7 @@ nav .left a {
 nav .right {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: clamp(15px, 2vw, 20px);
 }
 
 nav .right a {
@@ -273,7 +273,7 @@ h1 {
 
 h2 {
     font-size: clamp(2rem, 4vw, 2.8rem);
-    margin-bottom: 40px;
+    margin-bottom: clamp(30px, 5vw, 40px);
     text-align: center;
     background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
     -webkit-background-clip: text;
@@ -363,8 +363,9 @@ h2 {
 .skills-section .cells .cell {
   display: flex;
   align-items: center;
-  gap: 15px;
-  width: 220px;
+  gap: clamp(10px, 2vw, 15px);
+  flex: 1 1 200px; /* Allow items to grow and shrink, with a base of 200px */
+  max-width: 250px; /* Prevent cells from becoming too wide on large screens */
 }
 
 .skills-section .cells .cell img {
@@ -376,8 +377,8 @@ h2 {
 
 .projects-section .project-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(280px, 40vw, 350px), 1fr));
+  gap: clamp(20px, 4vw, 30px);
 }
 
 .projects-section .project h3 {
@@ -468,7 +469,7 @@ h2 {
 .testimonial-card {
   flex: 0 0 100%;
   box-sizing: border-box;
-  padding: 20px;
+  padding: clamp(20px, 4vw, 30px);
   background: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -479,31 +480,31 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 300px;
+  min-height: clamp(250px, 40vh, 350px);
   overflow: hidden; /* Ensure content is clipped if it overflows */
 }
 .testimonial-img {
-  display: block; /* Ensure it behaves as a block element */
-  flex-shrink: 0; /* Prevent image from shrinking below its defined size */
-  width: 100px;
-  height: 100px;
-  max-width: 100%; /* Ensure image scales down if container is smaller */
-  height: auto; /* Maintain aspect ratio */
+  display: block;
+  flex-shrink: 0;
+  width: clamp(80px, 15vw, 150px);
+  height: clamp(80px, 15vw, 150px); /* Ensure height matches width for perfect circle */
+  max-width: 100%;
+  aspect-ratio: 1/1; /* Maintain 1:1 aspect ratio */
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 1rem;
+  margin-bottom: clamp(0.8rem, 1.5vw, 1.5rem);
   border: 3px solid #007bff;
 }
 .testimonial-text {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  margin-bottom: 1rem;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  margin-bottom: clamp(0.8rem, 1.5vw, 1.5rem);
   line-height: 1.4;
   color: #fff;
 }
 .testimonial-author {
   font-family: 'Poppins', sans-serif;
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1.2vw, 0.9rem);
   font-weight: 600;
   color: #fff;
 }
@@ -673,7 +674,7 @@ h2 {
 /* Contact Section Styles */
 .contact-section .group {
   display: flex;
-  gap: 50px;
+  gap: clamp(20px, 5vw, 50px);
   align-items: flex-start;
 }
 
