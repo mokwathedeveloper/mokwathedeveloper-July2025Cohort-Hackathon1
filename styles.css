@@ -582,8 +582,8 @@ h2 {
   padding: 50px 20px;
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  background-color: #041C32; /* Dark blue background */
-  color: #fff;
+  background-color: var(--page-bg); /* Dark blue background */
+  color: var(--text-primary);
 }
 
 .projects-section h2 {
