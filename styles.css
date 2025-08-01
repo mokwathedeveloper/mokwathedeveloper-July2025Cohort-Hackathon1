@@ -541,7 +541,7 @@ h2 {
 }
 .carousel-dots label:hover,
 .carousel-dots label:focus {
-  background: #fff;
+  background: var(--text-primary);
   outline: none;
 }
 /* Slide navigation via radio buttons */
