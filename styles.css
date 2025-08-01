@@ -458,11 +458,11 @@ h2 {
 */
 /* Testimonial Carousel Styles */
 #testimonials {
-  background-color: #041C32; /* dark blue background */
+  background-color: var(--page-bg); /* dark blue background */
   padding: 50px 20px;
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  color: #fff; /* default text color */
+  color: var(--text-primary); /* default text color */
 }
 .section-title {
   font-size: 1.8rem;
