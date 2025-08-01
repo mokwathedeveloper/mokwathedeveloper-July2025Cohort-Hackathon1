@@ -484,12 +484,12 @@ h2 {
   overflow: hidden; /* Ensure content is clipped if it overflows */
 }
 .testimonial-img {
-  display: block; /* Ensure it behaves as a block element */
-  flex-shrink: 0; /* Prevent image from shrinking below its defined size */
+  display: block;
+  flex-shrink: 0;
   width: clamp(80px, 15vw, 150px);
-  height: clamp(80px, 15vw, 150px);
-  max-width: 100%; /* Ensure image scales down if container is smaller */
-  height: auto; /* Maintain aspect ratio */
+  height: clamp(80px, 15vw, 150px); /* Ensure height matches width for perfect circle */
+  max-width: 100%;
+  aspect-ratio: 1/1; /* Maintain 1:1 aspect ratio */
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: clamp(0.8rem, 1.5vw, 1.5rem);
