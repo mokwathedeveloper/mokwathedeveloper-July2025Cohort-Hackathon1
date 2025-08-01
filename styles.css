@@ -92,6 +92,43 @@ section {
   animation-range-end: cover 40%;
 }
 
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  section {
+    animation: none !important;
+  }
+
+  * {
+    transition: none !important;
+  }
+
+  .skills-section .cells .cell:hover,
+  .projects-section .project:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  nav .right a::after {
+    transition: none !important;
+  }
+
+  nav .right a:hover {
+    color: var(--link-hover);
+  }
+
+  .hero-section .headshot img {
+    transition: none !important;
+  }
+
+  footer .footer-right a {
+    transition: none !important;
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
 }
