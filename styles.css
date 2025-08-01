@@ -152,6 +152,7 @@ nav .right a {
   position: relative;
   transition: color 0.3s ease;
   margin-left: 0;
+  font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
 /* Underline animation on hover */
@@ -319,7 +320,7 @@ h2 {
 }
 
 .projects-section .project h3 {
-    font-size: 24px;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
     margin-bottom: 10px;
     color: var(--link-primary);
     display: flex;
