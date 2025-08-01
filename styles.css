@@ -321,11 +321,13 @@ h2 {
 }
 
 .hero-section .headshot img {
-  width: 350px;
+  width: clamp(250px, 30vw, 350px);
+  aspect-ratio: 1/1; /* Ensure perfect circular shape */
   border-radius: 50%;
   border: 3px solid var(--link-primary);
   box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover; /* Prevent image distortion */
 }
 
 /* 
