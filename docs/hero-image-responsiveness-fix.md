@@ -1,23 +1,33 @@
-# Hero Image Responsiveness Fix Branch Documentation
+# Hero Image Responsiveness and Animation Enhancement
 
-This branch addresses the responsiveness issues with the hero section image, specifically ensuring it maintains a perfect circular shape and scales correctly across all devices and browsers, including iPhones like the XR.
+This document outlines the work done on the `fix/hero-section-revamp` branch to address the hero image implementation. The goal was to create a more professional, robust, and visually engaging hero section.
 
 ## Problem Statement
 
-The hero section image, despite previous responsive efforts, does not consistently maintain its perfect circular shape and optimal scaling on certain mobile devices (e.g., iPhone XR). This indicates a subtle conflict between CSS sizing properties, the image's intrinsic aspect ratio, and the `border-radius` property.
+The previous implementation of the hero image, while functional, lacked the polish and advanced styling of a modern web portfolio. It used a standard `<img>` tag, which limited the possibilities for advanced CSS effects and animations.
 
 ## Solution Approach
 
-The solution will involve a precise adjustment of CSS properties to ensure the image's container and the image itself work harmoniously to maintain the desired circular shape and responsive scaling. This will likely include:
+The solution involved a complete refactoring of the hero image component, moving from a simple `<img>` tag to a `<div>` with a background image. This approach provides greater control over styling and allows for the implementation of CSS animations.
 
--   **Explicit Aspect Ratio:** Using `aspect-ratio` on the image or its container to guarantee a 1:1 ratio.
--   **Flexible Sizing:** Refining `width` and `height` properties with responsive units (e.g., `vw`, `clamp()`) to ensure proper scaling.
--   **`object-fit`:** Confirming `object-fit: cover;` is correctly applied to prevent image distortion within the circular frame.
--   **Cross-Browser Testing:** Verifying the fix across various browsers and device emulators to ensure consistent behavior.
+### Key Changes:
 
-## Implementation Plan (File by File)
+-   **HTML Refactoring:** The `<img>` tag within the `.headshot` container was replaced with a `<div>` with the ID `hero-image`. This provides a more semantic and stylistically flexible element to work with.
 
-1.  **`styles.css`:**
-    -   Inspect and modify the CSS rules for `.hero-section .headshot` and `.hero-section .headshot img`.
-    -   Apply `aspect-ratio` and refine sizing properties.
-    -   Ensure `object-fit: cover;` is correctly applied.
+-   **CSS Styling:**
+    -   The existing styles for the hero image were removed.
+    -   New styles were created for the `#hero-image` div, using the `background-image` property to display the headshot.
+    -   `background-size: cover` and `background-position: center` were used to ensure the image is always centered and fills the circular container without distortion.
+
+-   **CSS Animation:**
+    -   A subtle `pulse` animation was added to the hero image's `box-shadow`.
+    -   This animation creates a gentle pulsing effect, drawing attention to the hero section and adding a dynamic element to the page.
+
+## Implementation Details
+
+1.  **`index.html`:**
+    -   The `<img>` tag in the hero section was replaced with `<div id="hero-image"></div>`.
+
+2.  **`styles.css`:**
+    -   The old `.hero-section .headshot img` styles were removed.
+    -   New styles for `#hero-image` were added, including the `background-image`, `border-radius`, `box-shadow`, and the new `pulse` animation.
