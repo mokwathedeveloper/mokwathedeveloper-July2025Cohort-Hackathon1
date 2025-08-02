@@ -55,7 +55,7 @@ To run this project locally, follow these simple steps:
 
 ## CSS Refinements
 
-I recently refactored the CSS to remove duplicate selectors, which will improve the maintainability of the code. Additionally, I addressed compatibility issues by removing experimental CSS animation properties (`animation-timeline`, `animation-range-start`, `animation-range-end`) from the `section` selector, ensuring broader browser support.
+I recently refactored the CSS to remove duplicate selectors, which will improve the maintainability of the code. Additionally, I addressed compatibility issues by removing experimental CSS animation properties (`animation-timeline`, `animation-range-start`, `animation-range-end`) from the `section` selector, ensuring broader browser support. Furthermore, I removed vendor prefixes and addressed deprecated CSS properties for improved cross-browser compatibility and adherence to modern standards.
 
 ## Future Improvements
 
