@@ -136,11 +136,11 @@ section {
     box-shadow: none !important;
   }
 
-  nav .right a::after {
+  .nav__links a::after {
     transition: none !important;
   }
 
-  nav .right a:hover {
+  .nav__links a:hover {
     color: var(--link-hover);
   }
 
@@ -175,6 +175,22 @@ a {
   2. NAVBAR
   ============================================================
 */
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--link-primary);
+  color: var(--page-bg);
+  padding: 8px;
+  z-index: 9999;
+  -webkit-transition: top 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out;
+}
+
+.skip-link:focus {
+  top: 0;
+}
 nav {
   /* Glassmorphism effect */
   background: rgba(30, 41, 59, 0.6);
@@ -195,29 +211,29 @@ nav {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-nav .left a {
+.nav__logo a {
     font-size: 26px;
     font-weight: 700;
     color: var(--link-primary);
 }
 
-nav .right {
+.nav__links {
   display: flex;
   align-items: center;
   gap: clamp(15px, 2vw, 20px);
 }
 
-nav .right a {
+.nav__links a {
   color: var(--text-primary);
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
   transition: color 0.3s ease;
-  margin-left: 0;
+  margin-inline-start: 0;
   font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
 /* Underline animation on hover */
-nav .right a::after {
+.nav__links a::after {
   content: "";
   position: absolute;
   width: 0%;
@@ -228,16 +244,16 @@ nav .right a::after {
   transition: width 0.3s ease;
 }
 
-nav .right a:hover::after {
+.nav__links a:hover::after {
   width: 100%;
 }
 
-nav .right a:hover {
+.nav__links a:hover {
   color: var(--link-hover);
 }
 
-nav .right a span {
-  margin-left: 5px;
+  .nav__links a span {
+  margin-inline-start: 5px;
 }
 
 /* CSS-only Hamburger Menu */
@@ -431,7 +447,7 @@ h2 {
 }
 
 .hero-section .text .links a {
-  margin-right: 10px;
+  margin-inline-end: 10px;
   margin-bottom: 10px;
 }
 
@@ -442,11 +458,11 @@ h2 {
 */
 /* Testimonial Carousel Styles */
 #testimonials {
-  background-color: #041C32; /* dark blue background */
+  background-color: var(--page-bg); /* dark blue background */
   padding: 50px 20px;
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  color: #fff; /* default text color */
+  color: var(--text-primary); /* default text color */
 }
 .section-title {
   font-size: 1.8rem;
@@ -476,7 +492,7 @@ h2 {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
-  color: #fff; /* text inside card */
+  color: var(--text-primary); /* text inside card */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -494,20 +510,20 @@ h2 {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: clamp(0.8rem, 1.5vw, 1.5rem);
-  border: 3px solid #007bff;
+  border: 3px solid var(--link-primary);
 }
 .testimonial-text {
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(0.9rem, 1.5vw, 1.1rem);
   margin-bottom: clamp(0.8rem, 1.5vw, 1.5rem);
   line-height: 1.4;
-  color: #fff;
+  color: var(--text-primary);
 }
 .testimonial-author {
   font-family: 'Poppins', sans-serif;
   font-size: clamp(0.8rem, 1.2vw, 0.9rem);
   font-weight: 600;
-  color: #fff;
+  color: var(--text-primary);
 }
 /* Dot navigation style */
 .carousel-dots {
@@ -525,7 +541,7 @@ h2 {
 }
 .carousel-dots label:hover,
 .carousel-dots label:focus {
-  background: #fff;
+  background: var(--text-primary);
   outline: none;
 }
 /* Slide navigation via radio buttons */
@@ -542,7 +558,7 @@ h2 {
 #testimonial1:checked ~ .carousel-dots label[for="testimonial1"],
 #testimonial2:checked ~ .carousel-dots label[for="testimonial2"],
 #testimonial3:checked ~ .carousel-dots label[for="testimonial3"] {
-  background: #007bff;
+  background: var(--link-primary);
 }
 /* Responsive adjustments */
  @media (min-width: 600px) {
@@ -566,8 +582,8 @@ h2 {
   padding: 50px 20px;
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  background-color: #041C32; /* Dark blue background */
-  color: #fff;
+  background-color: var(--page-bg); /* Dark blue background */
+  color: var(--text-primary);
 }
 
 .projects-section h2 {
@@ -582,14 +598,14 @@ h2 {
 }
 
 .project {
-  background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+  background: var(--section-bg); /* Glassmorphism effect */
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   padding: 30px;
   text-align: left;
-  color: #fff;
+  color: var(--text-primary);
   transition: transform 0.3s ease;
 }
 
@@ -600,11 +616,11 @@ h2 {
 .project h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #fff;
+  color: var(--text-primary);
 }
 
 .project h3 a {
-  color: #fff;
+  color: var(--text-primary);
   text-decoration: none;
 }
 
@@ -613,8 +629,8 @@ h2 {
 }
 
 .project-icon {
-  margin-right: 10px;
-  color: #00bcd4; /* A contrasting color for icons */
+  margin-inline-end: 10px;
+  color: var(--link-primary); /* A contrasting color for icons */
 }
 
 .project p {
@@ -631,15 +647,15 @@ h2 {
 
 .project ul li::before {
   content: '•'; /* Custom bullet point */
-  color: #00bcd4;
+  color: var(--link-primary);
   position: absolute;
   left: 0;
 }
 
 .project a {
   display: inline-block;
-  background-color: #00bcd4;
-  color: #fff;
+  background-color: var(--link-primary);
+  color: var(--page-bg);
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
@@ -648,7 +664,7 @@ h2 {
 }
 
 .project a:hover {
-  background-color: #0097a7;
+  background-color: var(--link-hover);
 }
 
 /* Responsive adjustments for projects */
@@ -756,15 +772,27 @@ footer .footer-left p {
 
 footer .footer-right a {
   color: var(--footer-text);
-  margin-left: 12px;
+  margin-inline-start: 12px;
   font-size: 18px;
   transition: transform 0.3s ease, color 0.3s ease;
   display: inline-flex;
   align-items: center;
 }
 
+footer .footer-right ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 12px;
+}
+
+footer .footer-right li {
+  display: inline-block;
+}
+
 footer .footer-right a:first-child {
-  margin-left: 0;
+  margin-inline-start: 0;
 }
 
 /* Hover effect for social media icons */
@@ -788,7 +816,7 @@ footer .footer-right a:focus-visible {
     order: 2; /* Ensure hamburger is on the right */
   }
 
-  nav .right {
+  .nav__links {
     position: absolute;
     top: 80px;
     left: 0;
@@ -804,20 +832,20 @@ footer .footer-right a:focus-visible {
     transition: max-height 0.5s ease-in-out;
   }
 
-  nav .right a {
+  .nav__links a {
     width: 100%;
     text-align: center;
     padding: 20px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  nav .right a:hover {
+  .nav__links a:hover {
     background-color: var(--link-primary);
     color: #0f172a;
   }
 
   /* The "checkbox hack" for the hamburger menu */
-  .hamburger-toggle:checked ~ .right {
+  .hamburger-toggle:checked ~ .nav__links {
     max-height: 500px; /* Adjust as needed */
   }
 
@@ -860,13 +888,13 @@ footer .footer-right a:focus-visible {
     padding: 0 20px;
   }
 
-  nav .right a span {
+  .nav__links a span {
     display: inline-block;
   }
 
-  nav .right a {
+  .nav__links a {
     font-size: 18px;
-    margin-left: 0;
+    margin-inline-start: 0;
   }
 
   section {

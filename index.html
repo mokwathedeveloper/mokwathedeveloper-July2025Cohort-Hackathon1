@@ -37,7 +37,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght @700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -65,9 +65,10 @@
   </script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <!-- NAVBAR -->
     <nav>
-    <div class="left">
+    <div class="nav__logo">
       <a href="/">Mokwa Moffat Ohuru</a>
     </div>
 
@@ -78,7 +79,7 @@
     </label>
 
     <!-- Desktop Navigation -->
-    <div class="right">
+    <div class="nav__links">
       <a href="https://github.com/mokwathedeveloper" target="_blank" rel="noopener noreferrer" aria-label="View my GitHub profile">
         <i class="fa-brands fa-github"></i>
         <span>Github</span>
@@ -97,7 +98,7 @@
   </nav>
 
   <!-- Main Content -->
-  <main class="content-fade-in">
+  <main id="main-content" class="content-fade-in">
     <!-- SECTION 1: Hero -->
         <section class="hero-section">
       <div class="text">
@@ -290,25 +291,33 @@
       <p>&copy; 2025 Mokwa Moffat Ohuru. All rights reserved.</p>
     </div>
     <div class="footer-right">
-      <!-- GitHub Profile -->
-      <a href="https://github.com/mokwathedeveloper"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="View Mokwa Moffat Ohuru's GitHub profile">
-        <i class="fa-brands fa-github"></i>
-      </a>
-      <!-- LinkedIn Profile -->
-      <a href="https://www.linkedin.com/in/mokwa-dev/"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="View Mokwa Moffat Ohuru's LinkedIn profile">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-      <!-- Email Contact -->
-      <a href="mailto:mokwamoffat12 @gmail.com"
-         aria-label="Send an email to Mokwa Moffat Ohuru">
-        <i class="fa-solid fa-envelope"></i>
-      </a>
+      <ul>
+        <li>
+          <!-- GitHub Profile -->
+          <a href="https://github.com/mokwathedeveloper"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="View Mokwa Moffat Ohuru's GitHub profile">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <!-- LinkedIn Profile -->
+          <a href="https://www.linkedin.com/in/mokwa-dev/"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="View Mokwa Moffat Ohuru's LinkedIn profile">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <!-- Email Contact -->
+          <a href="mailto:mokwamoffat12 @gmail.com"
+             aria-label="Send an email to Mokwa Moffat Ohuru">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </li>
+      </ul>
     </div>
   </footer>
 </body>
