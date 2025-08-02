@@ -53,6 +53,10 @@ To run this project locally, follow these simple steps:
 
     You can simply open the `index.html` file in your favorite web browser to view the website.
 
+## CSS Refinements
+
+I recently refactored the CSS to remove duplicate selectors, which will improve the maintainability of the code.
+
 ## Future Improvements
 
 I'm always looking for ways to improve my work. Here are a few things I'm considering for the future:
