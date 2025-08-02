@@ -136,11 +136,11 @@ section {
     box-shadow: none !important;
   }
 
-  nav .right a::after {
+  .nav__links a::after {
     transition: none !important;
   }
 
-  nav .right a:hover {
+  .nav__links a:hover {
     color: var(--link-hover);
   }
 
@@ -211,21 +211,21 @@ nav {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-nav .left a {
+.nav__logo a {
     font-size: 26px;
     font-weight: 700;
     color: var(--link-primary);
 }
 
-nav .right {
+.nav__links {
   display: flex;
   align-items: center;
   gap: clamp(15px, 2vw, 20px);
 }
 
-nav .right a {
+.nav__links a {
   color: var(--text-primary);
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
   transition: color 0.3s ease;
   margin-left: 0;
@@ -233,7 +233,7 @@ nav .right a {
 }
 
 /* Underline animation on hover */
-nav .right a::after {
+.nav__links a::after {
   content: "";
   position: absolute;
   width: 0%;
@@ -244,15 +244,15 @@ nav .right a::after {
   transition: width 0.3s ease;
 }
 
-nav .right a:hover::after {
+.nav__links a:hover::after {
   width: 100%;
 }
 
-nav .right a:hover {
+.nav__links a:hover {
   color: var(--link-hover);
 }
 
-nav .right a span {
+.nav__links a span {
   margin-left: 5px;
 }
 
@@ -816,7 +816,7 @@ footer .footer-right a:focus-visible {
     order: 2; /* Ensure hamburger is on the right */
   }
 
-  nav .right {
+  .nav__links {
     position: absolute;
     top: 80px;
     left: 0;
@@ -832,7 +832,7 @@ footer .footer-right a:focus-visible {
     transition: max-height 0.5s ease-in-out;
   }
 
-  nav .right a {
+  .nav__links a {
     width: 100%;
     text-align: center;
     padding: 20px 0;
@@ -845,7 +845,7 @@ footer .footer-right a:focus-visible {
   }
 
   /* The "checkbox hack" for the hamburger menu */
-  .hamburger-toggle:checked ~ .right {
+  .hamburger-toggle:checked ~ .nav__links {
     max-height: 500px; /* Adjust as needed */
   }
 
