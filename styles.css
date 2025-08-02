@@ -110,10 +110,14 @@ body {
 }
 
 section {
+  padding: var(--section-padding-y) var(--section-padding-x);
+  margin: 0 var(--section-margin-x) var(--section-margin-bottom);
+  background-color: var(--section-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   animation: slide-in 1s ease-out forwards;
-  animation-timeline: view();
-  animation-range-start: cover 0%;
-  animation-range-end: cover 40%;
 }
 
 /* Reduce motion for users who prefer it */
@@ -873,10 +877,6 @@ footer .footer-right a:focus-visible {
     flex-direction: column-reverse;
     text-align: center;
     gap: 30px;
-  }
-
-  .hero-section .headshot img {
-    width: 300px;
   }
 
   .hero-section .text h1 {
