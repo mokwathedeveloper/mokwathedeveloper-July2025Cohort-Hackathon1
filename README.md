@@ -40,7 +40,7 @@ To run this project locally, follow these simple steps:
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/mokwathedeveloper/mokwathedeveloper-July2025Cohort-Hackathon1.git
+    git clone https://github.com/mokwathedeveloper/mokwa_moffat_portfolio.git
     ```
 
 2.  **Navigate to the project directory:**
