@@ -517,8 +517,9 @@ h2 {
 .testimonial-img {
   display: block;
   flex-shrink: 0;
-  width: clamp(80px, 15vw, 150px);
-  height: clamp(80px, 15vw, 150px); /* Ensure height matches width for perfect circle */
+  width: clamp(60px, 15vw, 120px); /* Adjusted for better scaling */
+  height: clamp(60px, 15vw, 120px); /* Adjusted for better scaling */
+  min-width: 60px; /* Prevent image from becoming too small */
   max-width: 100%;
   aspect-ratio: 1/1; /* Maintain 1:1 aspect ratio */
   border-radius: 50%;
