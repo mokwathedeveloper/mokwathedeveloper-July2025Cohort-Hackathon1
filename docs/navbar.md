@@ -12,5 +12,5 @@ This branch focuses on the development of the responsive navigation bar for the 
 
 ## Component Structure
 
-- **`index.html`:** The HTML structure for the navbar is contained within a `<nav>` element. It includes the brand logo, navigation links, and the hamburger menu toggle.
-- **`styles.css`:** The CSS for the navbar is implemented using a mobile-first approach. It includes styles for the glassmorphism effect, the hamburger menu transition, and the responsive layout.
+- **`index.html`:** The HTML structure for the navbar is contained within a `<nav>` element. It includes the brand logo (`.nav__logo`), navigation links (`.nav__links`), and the hamburger menu toggle.
+- **`styles.css`:** The CSS for the navbar is implemented using a mobile-first approach. It includes styles for the glassmorphism effect, the hamburger menu transition, and the responsive layout, utilizing the `.nav__logo` and `.nav__links` classes for improved specificity and organization.
