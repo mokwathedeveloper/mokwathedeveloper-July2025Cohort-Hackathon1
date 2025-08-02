@@ -18,6 +18,7 @@ This branch aims to achieve a comprehensive "wow factor" and professional respon
 
 1.  **`styles.css`:**
     -   **Fluid Typography:** Implemented `clamp()` for `h3` elements in projects and navigation links (`nav .right a`) to ensure dynamic font sizing.
+    -   **Logical Properties for Spacing:** Replaced directional margin properties (`margin-left`, `margin-right`) with logical properties (`margin-inline-start`, `margin-inline-end`) for improved internationalization and adaptability to different writing modes.
     -   **Refined Media Queries:** Consolidated and refined existing media queries for `max-width: 768px` and `max-width: 600px` to ensure consistent responsive behavior across sections, hero, contact, and footer.
     -   **Viewport-based Spacing:** Extended CSS Custom Properties (`--section-padding-x`, `--section-padding-y`, etc.) and applied `var()` with `clamp()` to `section` padding/margins and `nav` padding for fluid spacing.
     -   **Testimony Section Layout:** Applied `clamp()` to `padding`, `min-height`, image dimensions (`width`, `height`), and font sizes (`.testimonial-text`, `.testimonial-author`) within testimonial cards. Fixed circular images using `aspect-ratio: 1/1;` on `.testimonial-img`.
