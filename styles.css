@@ -228,7 +228,7 @@ nav {
   font-weight: 600;
   position: relative;
   transition: color 0.3s ease;
-  margin-left: 0;
+  margin-inline-start: 0;
   font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
@@ -252,8 +252,8 @@ nav {
   color: var(--link-hover);
 }
 
-.nav__links a span {
-  margin-left: 5px;
+  .nav__links a span {
+  margin-inline-start: 5px;
 }
 
 /* CSS-only Hamburger Menu */
@@ -447,7 +447,7 @@ h2 {
 }
 
 .hero-section .text .links a {
-  margin-right: 10px;
+  margin-inline-end: 10px;
   margin-bottom: 10px;
 }
 
@@ -629,7 +629,7 @@ h2 {
 }
 
 .project-icon {
-  margin-right: 10px;
+  margin-inline-end: 10px;
   color: var(--link-primary); /* A contrasting color for icons */
 }
 
@@ -772,7 +772,7 @@ footer .footer-left p {
 
 footer .footer-right a {
   color: var(--footer-text);
-  margin-left: 12px;
+  margin-inline-start: 12px;
   font-size: 18px;
   transition: transform 0.3s ease, color 0.3s ease;
   display: inline-flex;
@@ -792,7 +792,7 @@ footer .footer-right li {
 }
 
 footer .footer-right a:first-child {
-  margin-left: 0;
+  margin-inline-start: 0;
 }
 
 /* Hover effect for social media icons */
@@ -839,7 +839,7 @@ footer .footer-right a:focus-visible {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  nav .right a:hover {
+  .nav__links a:hover {
     background-color: var(--link-primary);
     color: #0f172a;
   }
@@ -888,13 +888,13 @@ footer .footer-right a:focus-visible {
     padding: 0 20px;
   }
 
-  nav .right a span {
+  .nav__links a span {
     display: inline-block;
   }
 
-  nav .right a {
+  .nav__links a {
     font-size: 18px;
-    margin-left: 0;
+    margin-inline-start: 0;
   }
 
   section {
