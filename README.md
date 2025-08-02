@@ -53,9 +53,9 @@ To run this project locally, follow these simple steps:
 
     You can simply open the `index.html` file in your favorite web browser to view the website.
 
-## CSS Refinements
+## Code Quality Improvements
 
-I recently refactored the CSS to remove duplicate selectors, which will improve the maintainability of the code. Additionally, I addressed compatibility issues by removing experimental CSS animation properties (`animation-timeline`, `animation-range-start`, `animation-range-end`) from the `section` selector, ensuring broader browser support. Furthermore, I removed vendor prefixes and addressed deprecated CSS properties for improved cross-browser compatibility and adherence to modern standards.
+I recently refactored the CSS to remove duplicate selectors, which will improve the maintainability of the code. Additionally, I addressed compatibility issues by removing experimental CSS animation properties (`animation-timeline`, `animation-range-start`, `animation-range-end`) from the `section` selector, ensuring broader browser support. Furthermore, I removed vendor prefixes and addressed deprecated CSS properties for improved cross-browser compatibility and adherence to modern standards. Finally, I resolved HTML validation errors by removing trailing slashes from void elements and correcting `mailto` href attributes.
 
 ## Future Improvements
 
