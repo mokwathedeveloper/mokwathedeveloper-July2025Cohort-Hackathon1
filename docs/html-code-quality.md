@@ -20,3 +20,7 @@ This branch focuses on enhancing the overall code quality of the `index.html` an
     -   Identify all `<img>` tags.
     -   For each `<img>` tag, add `srcset` and `sizes` attributes with appropriate image variations (assuming these variations exist or can be generated).
     -   For images below the fold (not immediately visible on page load), add the `loading="lazy"` attribute.
+
+## Code Quality Improvements
+
+I recently refactored the CSS to remove duplicate selectors, which will improve the maintainability of the code. Additionally, I addressed compatibility issues by removing experimental CSS animation properties (`animation-timeline`, `animation-range-start`, `animation-range-end`) from the `section` selector, ensuring broader browser support. Furthermore, I removed vendor prefixes and addressed deprecated CSS properties for improved cross-browser compatibility and adherence to modern standards. Finally, I resolved HTML validation errors by removing trailing slashes from void elements and correcting `mailto` href attributes.
