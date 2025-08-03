@@ -53,6 +53,7 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh; /* Ensure body always takes full viewport height */
 }
 
 /* Main content fade-in animation */
