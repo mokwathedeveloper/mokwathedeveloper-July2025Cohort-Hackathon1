@@ -31,7 +31,6 @@ This project was built using a combination of modern web technologies:
 
 *   **HTML5:** For the structure and semantics of the website.
 *   **CSS3:** For the styling and layout, with a focus on modern features like Flexbox, Grid, and custom properties.
-*   **JavaScript:** For the interactive elements and dynamic functionality.
 
 ## Getting Started
 
