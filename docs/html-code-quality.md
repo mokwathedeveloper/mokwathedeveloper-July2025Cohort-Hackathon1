@@ -4,6 +4,7 @@ This branch focuses on enhancing the overall code quality of the `index.html` an
 
 ## Key Areas of Focus
 
+-   **Semantic HTML Structure:** Ensured correct top-level semantic structuring of `index.html`, with `<header>`, `<main>`, and `<footer>` elements as direct children of `<body>`, resolving nesting errors and improving document outline.
 -   **Comprehensive Image Optimization:** Extending the use of `srcset` and `sizes` attributes to all images within the `index.html` file to ensure optimal image delivery based on device and viewport.
 -   **Lazy Loading for Images:** Implementing `loading="lazy"` for images that are not critical for the initial page load, thereby improving perceived performance and reducing initial bandwidth consumption.
 -   **Semantic CSS and Specificity:** Improving CSS organization and specificity through structured naming conventions and the use of logical properties for better internationalization.

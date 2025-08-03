@@ -68,3 +68,8 @@ I'm always open to new opportunities and collaborations. If you'd like to connec
 
 *   **GitHub:** [https://github.com/mokwathedeveloper](https://github.com/mokwathedeveloper)
 *   **LinkedIn:** [https://www.linkedin.com/in/mokwa-dev/](https://www.linkedin.com/in/mokwa-dev/)
+                                                           │
+ ╰────────────────────────────────────────────────────────────────────────────────────╯
+
+⠏ Waiting for user confirmation...
+
