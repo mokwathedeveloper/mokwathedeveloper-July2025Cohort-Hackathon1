@@ -335,16 +335,14 @@ h2 {
     position: relative;
 }
 
-#hero-image {
+.hero-headshot-img {
   width: clamp(250px, 30vw, 350px);
   aspect-ratio: 1/1;
-  background-image: url('../images/hero-headshot.webp');
-  background-size: cover;
-  background-position: center;
   border-radius: 50%;
   border: 3px solid var(--link-primary);
   box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
   animation: pulse 2s infinite;
+  object-fit: cover;
 }
 
 @keyframes pulse {
