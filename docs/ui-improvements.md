@@ -4,37 +4,30 @@ This document outlines the work done to improve the UI of the portfolio website.
 
 ## Hero Image Responsiveness and Animation Enhancement
 
-This section outlines the work done on the `fix/hero-section-revamp` branch to address the hero image implementation. The goal was to create a more professional, robust, and visually engaging hero section.
+This section outlines the work done to ensure the hero image is responsive and visually engaging.
 
-### Problem Statement
+### Implementation Approach
 
-The previous implementation of the hero image, while functional, lacked the polish and advanced styling of a modern web portfolio. It used a standard `<img>` tag, which limited the possibilities for advanced CSS effects and animations.
-
-### Solution Approach
-
-The solution involved a complete refactoring of the hero image component, moving from a simple `<img>` tag to a `<div>` with a background image. This approach provides greater control over styling and allows for the implementation of CSS animations.
+The hero image is implemented using a semantic `<img>` tag, which allows for proper accessibility via `alt` attributes and efficient image loading. Styling is applied to this `<img>` element to achieve the desired visual effects.
 
 #### Key Changes:
 
--   **HTML Refactoring:** The `<img>` tag within the `.headshot` container was replaced with a `<div>` with the ID `hero-image`. This provides a more semantic and stylistically flexible element to work with.
+-   **HTML Structure:** The hero headshot is now represented by an `<img>` tag within the `.headshot` container.
 
 -   **CSS Styling:**
-    -   The existing styles for the hero image were removed.
-    -   New styles were created for the `#hero-image` div, using the `background-image` property to display the headshot.
-    -   `background-size: cover` and `background-position: center` were used to ensure the image is always centered and fills the circular container without distortion.
-
--   **CSS Animation:**
-    -   A subtle `pulse` animation was added to the hero image's `box-shadow`.
-    -   This animation creates a gentle pulsing effect, drawing attention to the hero section and adding a dynamic element to the page.
+    -   Styles are applied directly to the `.hero-headshot-img` class.
+    -   `width: clamp(250px, 30vw, 350px)` ensures fluid sizing.
+    -   `aspect-ratio: 1/1` and `border-radius: 50%` maintain the circular shape.
+    -   A subtle `pulse` animation is applied via `box-shadow`.
+    -   `object-fit: cover` prevents image distortion.
 
 ### Implementation Details
 
 1.  **`index.html`:**
-    -   The `<img>` tag in the hero section was replaced with `<div id="hero-image"></div>`.
+    -   The hero section now uses `<img src="images/hero-headshot.webp" alt="Mokwa Moffat Ohuru headshot" class="hero-headshot-img">`.
 
 2.  **`styles.css`:**
-    -   The old `.hero-section .headshot img` styles were removed.
-    -   New styles for `#hero-image` were added, including the `background-image`, `border-radius`, `box-shadow`, and the new `pulse` animation.
+    -   Styles for `.hero-headshot-img` have been defined, replacing previous `div#hero-image` styles.
 
 ## Testimonial Image Responsiveness Fix
 

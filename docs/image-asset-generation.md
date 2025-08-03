@@ -1,18 +1,26 @@
 # Image Asset Generation for Responsive Images Documentation
 
-This document outlines the necessary steps to generate and integrate various image resolutions for optimal responsive image delivery using `srcset` and `sizes` attributes. This is crucial for improving website performance, especially on devices with different screen densities and sizes.
+This document outlines the necessary steps to generate and integrate various image resolutions for optimal responsive image delivery. This is crucial for improving website performance, especially on devices with different screen densities and sizes.
 
-## Problem Statement
+## Current Image Usage in `index.html`
 
-Currently, the `index.html` file utilizes `srcset` and `sizes` attributes for certain images (e.g., hero headshot, skill logos, testimonial images). However, the smaller resolution image files specified in these `srcset` attributes are missing from the `images/` directory. This results in broken image displays or inefficient image loading, as browsers cannot find the optimized versions.
+Currently, `index.html` uses a combination of single `<img>` tags and `srcset`/`sizes` attributes for responsive image delivery. It's important to ensure that all referenced image files exist and are optimized.
 
-## Solution: Generate and Place Missing Image Assets
+-   **Hero Headshot:** Uses a single `<img>` tag (`images/hero-headshot.webp`). Responsive sizing is handled via CSS `clamp()` on the image itself.
+-   **Skill Logos:** Use single `<img>` tags with `loading="lazy"` for performance. Responsive sizing is handled via CSS `clamp()`.
+-   **Testimonial Images:** Use `<img>` tags with `loading="lazy"`. While `srcset` and `sizes` attributes were previously used, they have been simplified to directly reference the main image files (`images/testimony.webp`, `images/testimony1.webp`, `images/testimony2.webp`) to resolve display issues. Responsive sizing is primarily handled via CSS `clamp()`.
 
-To fully leverage the benefits of responsive images and resolve the broken image issues, you need to generate multiple versions of each image at different resolutions and place them in the `images/` directory.
+## Problem Statement (Historical Context)
 
-### Required Image Variations (Examples):
+Previously, `index.html` utilized `srcset` and `sizes` attributes for certain images (e.g., hero headshot, skill logos, testimonial images). However, the smaller resolution image files specified in these `srcset` attributes were missing from the `images/` directory. This resulted in broken image displays or inefficient image loading, as browsers could not find the optimized versions.
 
-For each image currently using `srcset` (e.g., `hero-headshot.webp`, `html-logo.webp`, `testimony.webp`):
+## Solution: Generate and Place Missing Image Assets (If `srcset` is Re-implemented)
+
+To fully leverage the benefits of responsive images and resolve potential broken image issues, if `srcset` and `sizes` are re-implemented for more granular control, you would need to generate multiple versions of each image at different resolutions and place them in the `images/` directory.
+
+### Required Image Variations (Examples - for `srcset` re-implementation):
+
+For images intended to use `srcset` (e.g., `hero-headshot.webp`, `html-logo.webp`, `testimony.webp`):
 
 -   **Original/Large:** `[image-name].webp` (e.g., `hero-headshot.webp`)
 -   **Medium:** `[image-name]-medium.webp` (e.g., `hero-headshot-medium.webp`)
@@ -24,7 +32,7 @@ For each image currently using `srcset` (e.g., `hero-headshot.webp`, `html-logo.
 -   **Image Editing Software:** Tools like Adobe Photoshop, GIMP, or Affinity Photo allow precise control over image resizing and export settings.
 -   **Command-Line Tools:** For bulk processing, tools like ImageMagick or GraphicsMagick can be automated.
 
-### Steps to Implement:
+### Steps to Implement (for `srcset` re-implementation):
 
 1.  **Identify Images:** Review `index.html` to identify all `<img>` tags that have `srcset` attributes. Note down the base image name (e.g., `hero-headshot`).
 2.  **Generate Resolutions:** For each identified image, create at least two smaller versions (e.g., `small` and `medium`). Ensure they are optimized for web (e.g., WebP format for better compression).
