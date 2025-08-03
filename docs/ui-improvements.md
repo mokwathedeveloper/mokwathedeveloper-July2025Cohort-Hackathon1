@@ -50,10 +50,13 @@ The solution involved adjusting the `clamp()` values for the `.testimonial-img` 
 
 #### Key Changes:
 
--   **CSS Adjustment:** The `clamp()` function for the `width` and `height` of the `.testimonial-img` was modified.
-    -   The minimum value was changed from `80px` to `60px`.
-    -   The maximum value was changed from `150px` to `120px`.
--   **Minimum Width:** A `min-width` of `60px` was added to ensure the images maintain a reasonable size even on the smallest screens.
+-   **CSS Adjustment:** The `clamp()` function for the `width` and `height` of the `.testimonial-img` was modified to ensure better visibility and scaling.
+    -   The minimum value was changed from `60px` to `80px`.
+    -   The maximum value was changed from `120px` to `150px`.
+-   **Minimum Width:** A `min-width` of `80px` was added to ensure the images maintain a reasonable size even on the smallest screens.
+-   **Image Source Simplification:** The `srcset` and `src` attributes for testimonial images were simplified to directly reference existing image files, resolving issues where `alt` text was displayed instead of images.
+-   **Alt Attribute Update:** `alt` attributes for testimonial images were updated to be more generic and descriptive.
+-   **Content Professionalism:** Testimonial text content was updated to be more professional and aligned with Mokwa Moffat's profile.
 
 ### Implementation Details
 
