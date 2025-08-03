@@ -19,7 +19,7 @@ The navbar is structured using a `<nav>` HTML5 semantic element, which is approp
 ```html
 <nav>
   <div class="nav__logo">
-    <a href="/">Mokwa Moffat Ohuru</a>
+    <a href="/">Mokwa Moffat</a>
   </div>
 
   <!-- Hamburger Menu (for mobile) -->
@@ -98,7 +98,7 @@ The Navbar is placed at the very beginning of the `<body>` element in `index.htm
 
 To customize the Navbar:
 
-*   **Brand Name:** Modify the text within the `<a>` tag inside `div.left` in `index.html`.
+*   **Brand Name:** Modify the text within the `<a>` tag inside `div.nav__logo` in `index.html`.
 *   **Navigation Links:** Adjust the `href`, `aria-label`, icon class (`<i>`), and text (`<span>`) for each `<a>` tag within `div.right` in `index.html`.
 *   **Colors:** Modify CSS variables in the `:root` selector of `styles.css` such as `--page-bg`, `--link-primary`, `--text-primary`, and `--shadow-color` to change the navbar's color scheme.
 *   **Glassmorphism Effect:** Adjust the `rgba` values for `background` and the `blur()` value for `backdrop-filter` in `styles.css`.
