@@ -29,7 +29,7 @@ The hero section is encapsulated within a `<section>` element with the class `he
     </div>
   </div>
   <div class="headshot">
-    <img src="images/hero-headshot.webp" alt="..." srcset="..." sizes="...">
+    <img src="images/hero-headshot.webp" alt="Mokwa Moffat Ohuru headshot" class="hero-headshot-img">
   </div>
 </section>
 ```
@@ -48,11 +48,11 @@ The styling for the hero section is primarily handled within the `.hero-section`
     *   `justify-content: center` and `align-items: center` ensure vertical and horizontal alignment.
     *   `gap` provides consistent spacing between the text and image.
     *   `background-color: transparent !important; box-shadow: none !important; border: none !important;` overrides default section styles to allow the body's animated gradient background to show through.
-*   **Headshot Styling (`.hero-section .headshot img`)**:
+*   **Headshot Styling (`.hero-section .headshot .hero-headshot-img`)**:
     *   `width: clamp(250px, 30vw, 350px)` provides fluid sizing for responsiveness.
     *   `aspect-ratio: 1/1` and `border-radius: 50%` ensure a perfect circular shape.
     *   `border` and `box-shadow` add visual emphasis.
-    *   `transition` properties create a subtle hover effect (though the hover effect is defined on the parent `.hero-section .headshot` in the original CSS, it applies to the image).
+    *   `transition` properties create a subtle hover effect.
     *   `object-fit: cover` prevents image distortion.
 *   **Text Styling (`.hero-section .text h1`)**:
     *   `font-size: clamp(2.5rem, 5vw, 3.5rem)` ensures fluid typography.
@@ -75,7 +75,7 @@ The Hero Section is designed to be the first content block within the `<main>` e
 ### Accessibility
 
 *   **Semantic HTML:** The use of `<section>`, `<h1>`, and `<p>` provides clear semantic meaning for screen readers.
-*   **`alt` attribute:** The `alt` attribute on the `<img>` tag (`alt="A professional headshot of Mokwa Moffat Ohuru, a full-stack software developer."`) provides a descriptive text alternative for visually impaired users.
+*   **`alt` attribute:** The `alt` attribute on the `<img>` tag (`alt="Mokwa Moffat Ohuru headshot"`) provides a descriptive text alternative for visually impaired users.
 *   **`aria-label`:** While not directly on the hero section's internal links, the overall navigation links in the `nav` element utilize `aria-label` for enhanced accessibility.
 *   **Responsive Images (`srcset`, `sizes`):** These attributes ensure that appropriate image sizes are loaded based on the user's viewport and device pixel ratio, improving performance and user experience for all.
 *   **`prefers-reduced-motion`:** The global implementation of `@media (prefers-reduced-motion: reduce)` ensures that users who prefer less motion on their devices will have animations disabled, preventing potential discomfort.

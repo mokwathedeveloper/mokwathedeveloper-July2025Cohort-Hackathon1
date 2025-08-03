@@ -25,21 +25,21 @@ The navbar is structured using a `<nav>` HTML5 semantic element, which is approp
   <!-- Hamburger Menu (for mobile) -->
   <input type="checkbox" id="hamburger-toggle" class="hamburger-toggle">
   <label for="hamburger-toggle" class="hamburger-icon">
-    <i class="fa-solid fa-bars"></i>
+    <i class="fa-solid fa-bars" aria-hidden="true"></i>
   </label>
 
   <!-- Desktop Navigation -->
   <div class="nav__links">
     <a href="https://github.com/mokwathedeveloper" target="_blank" rel="noopener noreferrer" aria-label="View my GitHub profile">
-      <i class="fa-brands fa-github"></i>
+      <i class="fa-brands fa-github" aria-hidden="true"></i>
       <span>Github</span>
     </a>
     <a href="https://www.linkedin.com/in/mokwa-dev/" target="_blank" rel="noopener noreferrer" aria-label="View my LinkedIn profile">
-      <i class="fa-brands fa-linkedin"></i>
+      <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
       <span>Linkedin</span>
     </a>
     <a href="mailto:moffatmokwaohuru @gmail.com" aria-label="Send me an email">
-      <i class="fa-solid fa-envelope"></i>
+      <i class="fa-solid fa-envelope" aria-hidden="true"></i>
       <span>Email</span>
     </a>
   </div>
@@ -89,7 +89,7 @@ The Navbar is placed at the very beginning of the `<body>` element in `index.htm
 ### Accessibility
 
 *   **Semantic HTML:** The use of `<nav>` clearly identifies the navigation region for assistive technologies.
-*   **ARIA Attributes:** `aria-label` attributes are used on the navigation links (e.g., `aria-label="View my GitHub profile"`) to provide more descriptive context for screen reader users, improving their understanding of the link's purpose.
+*   **ARIA Attributes:** `aria-label` attributes are used on the navigation links (e.g., `aria-label="View my GitHub profile"`) to provide more descriptive context for screen reader users, and `aria-hidden="true"` is used on Font Awesome icons to prevent screen readers from announcing decorative elements.
 *   **Keyboard Navigation:** The navbar is fully navigable using a keyboard. The `:focus-visible` pseudo-class (globally defined) provides clear visual focus indicators for keyboard users.
 *   **CSS-only Hamburger:** By avoiding JavaScript for the hamburger menu, potential accessibility issues related to script loading or execution failures are mitigated.
 *   **`prefers-reduced-motion`:** The global implementation ensures that users who prefer less motion will not experience the hover animations, enhancing accessibility for those with vestibular disorders or motion sensitivities.
