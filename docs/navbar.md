@@ -12,8 +12,6 @@ A well-designed and implemented navbar is fundamental for user satisfaction and 
 
 ## 2. Implementation Details
 
-## 2. Implementation Details
-
 ### HTML Structure (`index.html`)
 
 The navbar is structured using a `<nav>` HTML5 semantic element, which is appropriate for major navigation blocks. It contains three main parts:
