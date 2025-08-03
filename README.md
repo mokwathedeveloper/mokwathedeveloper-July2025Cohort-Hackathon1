@@ -45,7 +45,7 @@ To run this project locally, follow these simple steps:
 2.  **Navigate to the project directory:**
 
     ```bash
-    cd mokwathedeveloper-July2025Cohort-Hackathon1
+    cd mokwa_moffat_portfolio
     ```
 
 3.  **Open `index.html` in your browser:**
