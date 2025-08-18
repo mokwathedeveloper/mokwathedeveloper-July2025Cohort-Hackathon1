@@ -1007,3 +1007,24 @@ footer .footer-right a:focus-visible {
 .nav__links a.active::after {
   width: 100%; /* Ensure the underline is full width for active link */
 }
+
+/* Form Validation Styles */
+.form-group small {
+  color: #e74c3c; /* Red for error messages */
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.form-group.error small {
+  visibility: visible;
+  opacity: 1;
+}
+
+.form-group.error input,
+.form-group.error textarea {
+  border-color: #e74c3c; /* Red border for invalid fields */
+}
