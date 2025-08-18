@@ -936,6 +936,30 @@ footer .footer-right a:focus-visible {
     background: none !important;
   }
 
+  /* Print Styles */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  nav, footer, .hero-section .links, .contact-section form button {
+    display: none !important;
+  }
+
+  section {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+    margin: 0 0 20px 0 !important;
+    padding: 20px !important;
+  }
+
+  h1, h2, h3 {
+    color: #000000 !important;
+    background: none !important;
+  }
+
   a {
     color: #0000ff !important;
     text-decoration: underline !important;
@@ -972,4 +996,14 @@ footer .footer-right a:focus-visible {
     height: 40px;
     font-size: 20px;
   }
+}
+
+/* Active Nav Link */
+.nav__links a.active {
+  color: var(--link-hover); /* Or any other active state style */
+  font-weight: bold;
+}
+
+.nav__links a.active::after {
+  width: 100%; /* Ensure the underline is full width for active link */
 }
